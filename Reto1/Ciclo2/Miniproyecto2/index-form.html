@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproyecto 2</title>
+    
+    <!-- Estilos de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        <!-- Favicon -->
+    <link rel="icon" href="./images/user-engagement.ico" type="image/x-icon">
+    
+    <!--Estilos del modal-->
+    <style>
+        .modal-content {
+            background-color: rgba(244, 252, 255, 0.9);
+            backdrop-filter: blur(px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Imagen de fondo Digital NAO x Tecmilenio-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="./images/NAO_Tecmilenio.007870de.svg" class="img-fluid" alt="Logo Digital NAO">
+            </div>
+        </div>
+
+        <!-- Botón para abrir el modal -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                        Abrir formulario de contactos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen SVG de fondo -->
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="./images/undraw_forms_re_pkrt.svg" class="img-fluid" alt="Imagen SVG" width="600"
+                        height="200">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Formulario de contactos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Formulario de contacto -->
+                        <form action="" method="POST">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <!-- Validación de correo electrónico -->
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con
+                                    nadie
+                                    más.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script de Bootstrap 5 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
